@@ -1,6 +1,3 @@
-
-
-
 // Responsive Navigation
 function responsiveNav() {
   let navChange = document.getElementById("menu");
@@ -13,11 +10,9 @@ function responsiveNav() {
   }
 }
 
-
-
 // Sticky Navigation
 $(window).scroll(function(){
-	if($(this).scrollTop() >= 1150){
+	if($(this).scrollTop() > 1150){
 		$('nav').addClass('nav-scrolled');
     $('nav a').addClass('nav-scrolled-a');
 	}
@@ -25,12 +20,8 @@ $(window).scroll(function(){
 		$('nav').removeClass('nav-scrolled');
     $('nav a').removeClass('nav-scrolled-a');
 	}
-})
-
-
 
 // Navigation Active State
-$(window).scroll(function() {
 	var scrollDistance = $(window).scrollTop();
 
 	$('#home, #about, #projects, #contact').each(function(i) {

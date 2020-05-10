@@ -5,15 +5,11 @@
     <title>Bobby Henderson</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-    <script src="script.js">
-
-    </script>
     <link href="https://fonts.googleapis.com/css?family=Sarabun:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
     <script src="js/script.js"></script>
   </head>
   <body>
@@ -27,7 +23,7 @@
             </a>
           </li>
           <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">About Me</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -36,8 +32,10 @@
       <a id="home"></a>
       <section id="landing">
         <div class="logoArea">
-          <h1 id="logoMain">Bobby <span class="lName">Henderson</span><div class="blinking">Work in Progress</div></h1>
-          <h2 id="logoSub">[ Web Design + Development Portfolio ]</h2>
+          <h1 id="logoMain">Bobby <span class="lName">Henderson</span>
+            <div class="blinking">Web + Software Development Portfolio</div>
+          </h1>
+          <!-- <h2 id="logoSub">Web + Software Development Portfolio</h2> -->
 
           <div class="social">
     				<a href="https://twitter.com/_StrongBobby" target="_blank"><img class="icons" src="assets/twitter.png" alt="Twitter" height="45" width="45"></a>
@@ -51,7 +49,7 @@
     <main>
       <a id="about"></a>
       <section class="light-background" id="about">
-        <h1>About</h1>
+        <h1>About Me</h1>
         <img src="assets/headShotPlace.png" alt="headshot" id="headShot">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -64,7 +62,6 @@
                 <i class="devicon-visualstudio-plain skillIcon"><span class="skillText">Visual Studio</span></i>
                 <i class="devicon-atom-original skillIcon"><span class="skillText">Atom</span></i>
                 <i class="devicon-github-plain skillIcon"><span class="skillText">GitHub</span></i>
-
               </ul>
             </div>
 
@@ -95,25 +92,45 @@
       <section class="dark-background" id="projectsSection">
         <h1>Projects</h1>
         <div id="projectContainer">
-
+          <!-- Project 1 -->
           <div class="project">
             <img class="projectEx"src="assets/intechProject.gif" alt="">
             <div class="projectDescript">
-                <h2>inTech Website</h2>
-                <p>Website built for Broward College's inTech club. Made with HTML, CSS, JavaScript, and PHP and served using Arch Linux.
+                <h3>inTech Website</h3>
+                <p>Website for Broward College’s technology club to showcase events, meeting times and projects created by the club’s members. Created using HTML, CSS, JavaScrips, and PHP. Running on NGINX web server and using Postfix as the mail server.
                 </p>
                 <div class="projectLinks">
                     <a class="projectButton" href="https://github.com/BobbyHen/inTech-Website" target="_blank">See Code</a>
                     <a class="projectButton" href="https://intech.club" target="_blank">See live</a>
                 </div>
             </div>
-            
-            
           </div>
-
+          <!-- Project 2 -->
           <div class="project">
-            
+              <img class="projectEx desktop"src="assets/surfsup-project.png" alt="">
+              <div class="projectDescript">
+                  <h3>surfsupgizmo.com</h3>
+                  <p>Website built for Broward College's inTech club. Made with HTML, CSS, JavaScript, and PHP and served using Arch Linux.
+                  </p>
+                  <div class="projectLinks">
+                      <!-- <a class="projectButton" href="#" target="_blank">See Code</a> -->
+                      <a class="projectButton" href="https://surfsupgizmo.com/" target="_blank">See live</a>
+                  </div>
+              </div>
           </div>
+          <!-- Project 3 -->
+          <div class="project">
+            <img class="projectEx"src="assets/intechProject.gif" alt="">
+            <div class="projectDescript">
+                <h3>ChemisTree</h3>
+                <p>ChemisTree is a Windows GUI application meant as an aid for students learning advanced chemistry. Created using Windows Forms, C#, and MySQL for the database.
+                </p>
+                <div class="projectLinks">
+                    <a class="projectButton" href="https://github.com/BobbyHen/ChemisTree.git" target="_blank">See Code</a>
+                    <a class="projectButton" href="#" target="_blank">See live</a>
+                </div>
+            </div>
+        </div>
 
         </div>
       </section>
@@ -149,7 +166,7 @@
     <footer>
       <div class="footerContainer">
         <div class="footerContent">
-          <p class="footerText">&copy; Bobby Henderson 2019</p>
+          <p class="footerText">&copy; Bobby Henderson 2020</p>
           
           <ul id="footerSocial">
             <li>
@@ -157,11 +174,11 @@
             </li>
 
             <li>
-                <a href="https://github.com/BobbyHen" target="_blank"> <i class="fab fa-github-square"></i>&nbsp;&nbsp;GitHub</a>
+              <a href="https://github.com/BobbyHen" target="_blank"> <i class="fab fa-github-square"></i>&nbsp;&nbsp;GitHub</a>
             </li>
 
             <li>
-                <a href="mailto:bobby.lee.hen@hotmail.com" target="_top"><i class="fas fa-envelope-square"></i>&nbsp;&nbsp;Email</a>
+              <a href="mailto:bobby.lee.hen@hotmail.com" target="_top"><i class="fas fa-envelope-square"></i>&nbsp;&nbsp;Email</a>
             </li>
           
           </ul>
