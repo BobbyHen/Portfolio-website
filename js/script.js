@@ -10,8 +10,9 @@ function responsiveNav() {
   }
 }
 
-// Sticky Navigation
+
 $(window).scroll(function(){
+	// Sticky Navigation
 	if($(this).scrollTop() > 1150){
 		$('nav').addClass('nav-scrolled');
     $('nav a').addClass('nav-scrolled-a');
@@ -21,8 +22,8 @@ $(window).scroll(function(){
     $('nav a').removeClass('nav-scrolled-a');
 	}
 
-// Navigation Active State
-	var scrollDistance = $(window).scrollTop();
+	// Navigation Active State
+	const scrollDistance = $(window).scrollTop();
 
 	$('#home, #about, #projects, #contact').each(function(i) {
 			if ($(this).position().top-80 <= scrollDistance) {

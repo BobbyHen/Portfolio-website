@@ -711,6 +711,7 @@ Devicon color
 .projectEx{
   height: auto; 
   width: 50%;
+  margin-bottom: 20px;
 }
 
 .desktop {
@@ -727,11 +728,20 @@ Devicon color
   color: #fff;
 }
 
+.projectDescript a {
+  color: rgb(0, 164, 170);
+}
+
 .projectLinks{
   display: flex;
   flex-direction: row;
   width: 100%;
   margin: auto;
+}
+
+.technologies-icons i {
+  font-size: 2em;
+  margin: 5px 5px;
 }
 
 .projectButton{
@@ -745,6 +755,7 @@ Devicon color
   margin: 10px;
   text-decoration: none;
   font-size: 1em;
+  margin-top: 20px;
   margin-bottom: 0px;
   transition: 0.6s;
   -webkit-transition: 0.6s;
