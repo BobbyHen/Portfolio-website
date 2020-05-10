@@ -1,0 +1,926 @@
+/* ----------------------------------------------------
+ Base Styling.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+
+*{
+  margin: auto;
+  padding: 0;
+}
+
+html{
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'open sans', sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+
+header{
+  width: 100%;
+  height: auto;
+}
+
+main{
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+/* ----------------------------------------------------
+  Page content formating
+  - secions
+  - body text
+*/
+
+
+/*    Section formating       */
+section{
+  width: auto;
+  height: auto;
+  padding: 0px 20% 20% 20%;
+  overflow: auto;
+}
+
+.light-background, .dark-background{
+  padding-top: 200px;
+}
+
+.light-background{
+  background-color: #fff;
+  color: #333;
+}
+
+.dark-background{
+  background-color: #333;
+  color: #ccc;
+}
+
+@media screen and (max-width: 600px) { 
+  section{
+    padding: 0px 10% 20%;
+  }
+}
+
+/*    Body text formating       */
+h1{
+  font-weight: normal;
+  font-size: 5em;
+  text-align: center;
+  color: #333;
+  margin-bottom: 50px;;
+  border-bottom: 5px solid #EB6E44;
+}
+
+.dark-background h1{
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+p{
+  font-size: 24px;
+  font-weight: 300;
+  padding: 25px 0px;
+}
+
+@media screen and (max-width: 1300px) { /* Mobile Text Formating */
+  h1{
+    font-size: 6em;
+    color: #333;
+
+  }
+
+  p{
+    font-size: 2vw;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 800px) { /* Mobile Text Formating */
+  h1{
+    color: #333;
+    text-align: center;
+  }
+
+  p{
+    font-size: 3vw;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) { /* Mobile Text Formating */
+
+  p{
+    font-size: 4.5vw;
+    text-align: center;
+  }
+}
+
+
+
+/* ----------------------------------------------------
+ Styling for navigation.
+*/
+
+nav {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+
+nav a {
+  font-family: 'Sarabun', sans-serif;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 50px 25px 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+/*   Nav Link Border Hover Animation   */
+
+.active {
+  color: #EB6E44;
+  border-bottom: 3px solid #EB6E44;
+}
+
+nav ul{
+  list-style-type: none;
+  margin: 0px 50px 0px 0px;
+  padding: 0;
+  float: right;
+}
+
+nav ul li{
+  display: inline-block;
+}
+
+nav ul li .hamIcon {
+  display: none;
+  font-size: 25px;
+}
+
+
+.nav-scrolled{ /* Sticky Navigation */
+  height: 80px;
+  position: fixed;
+  background-color: #000;
+  animation-duration: .5s;
+  animation-name: nav-scrolled;
+  opacity: .9;
+}
+
+.nav-scrolled-a {
+  padding-top: 33px;
+}
+
+/*   Sticky Navigation Animation  */
+@keyframes nav-scrolled {
+  from {
+    margin-top: -100%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}
+
+
+
+@media screen and (max-width: 1300px) { /* Mobile Navogigation */
+  nav {
+    margin: auto;
+  }
+
+  nav ul{
+    float: none;
+    padding: 0;
+    margin: auto;
+  }
+
+  nav ul li{
+    display: block;
+  }
+
+  nav ul li a {
+    display: none;
+  }
+
+  nav ul li a.hamIcon {
+    float: right;
+    display: block;
+    padding: 35px 50px 0px 0px;
+    border-bottom: none;
+  }
+
+/* Mobile Navigation (Responsive Class Applied) */
+  nav.responsive {
+    position: relative;
+  }
+
+  nav.responsive .hamIcon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 35px 50px 0px 0px;
+  }
+
+  nav.responsive a {
+    float: none;
+    display: block;
+    color: #000;
+    padding: 35px 20px;
+    border-bottom: none;
+  }
+
+  nav.responsive .active {
+    color: #fff;
+    background-color: #EB6E44;
+    border-bottom: none;
+  }
+}
+
+
+
+
+/* ----------------------------------------------------
+ Styling landing section main elements.
+    - Logo
+    - Social Icons
+*/
+
+
+#landing{
+  background-image: url("../assets/zwartevilt.png");
+  background-attachment: fixed;
+  width: auto;
+  height: 1200px;
+  padding: 0px 20% 0px 20%;
+}
+
+/*      Logo Formating     */
+.logoArea{
+  margin: 270px 16%;
+}
+
+#logoMain{
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #ccc;
+  font-size: 3.5vw;
+  margin: 0;
+  border-bottom: none;
+  animation-duration: 1.5s;
+  animation-name: mainSlidein;
+}
+
+/*   logoArea Animation  */
+@keyframes mainSlidein {
+  from {
+    margin-left: -100%;
+    width: 300%;
+  }
+
+  to {
+    margin-right: 100%;
+    width: 100%;
+  }
+}
+
+/*          */
+
+.lName{
+  color: #EB6E44;
+  display: inline;
+}
+
+#logoSub{
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-left:30%;
+  color: #a6a6a6;
+  font-size: 1.4vw;
+  animation-duration: 1s;
+  animation-name: Subslidein;
+}
+
+/*   logoSub Animation  */
+@keyframes Subslidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 30%;
+    width: 100%;
+  }
+}
+
+.blinking{
+  animation:blinkingText 3s infinite;
+  font-size: .3em;
+  background-color: #EB6E44;
+  border-radius: 20px;
+  padding: 20px; 
+}
+@keyframes blinkingText{
+	0%{		color: transparent;	}
+	49%{	color: rgba(255, 255, 255, 0.89);	}
+	50%{	color: rgba(255, 255, 255, 0.89);	}
+	99%{	color: transparent;	}
+	100%{	color: transparent;	}
+}
+
+
+
+/*          */
+
+
+
+/*@media screen and (max-width: 1600px) {
+  #logoMain{font-size: 5vw;}
+
+  #logpSub, .brac{font-size: 2vw;}
+}
+*/
+
+
+@media screen and (max-width: 1300px) {  /* Mobile Logo Formating */
+  #logoMain{
+    text-align: left;
+    font-size: 10vw;
+    margin: auto;
+    margin: 0;
+    border-bottom: none;
+    animation: none;
+  }
+
+  #logoSub{
+    text-align: left;
+    margin-left: 10px;
+    display: inline;
+    font-size: 2vw;
+    animation: none;
+  }
+
+  .brac{
+    color: #fff;
+    font-size: 2vw;
+  }
+}
+
+
+
+@media screen and (max-width: 500px) {  /* Mobile Logo Formating */
+
+  .logoArea{
+    margin-top: 170px;
+    margin-left: 5px;
+  }
+
+  .social{
+    margin-left: 200px;
+  }
+
+  #logoMain{
+    font-size: 14vw;
+  }
+
+  #logoSub{
+    font-size: 3vw;
+    margin-left: 5px;
+  }
+
+  .brac{
+    font-size: 3vw;
+  }
+}
+
+
+
+
+/*      Social Container Formating     */
+.social{
+  width: 95px;
+  padding-left: 19%;
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 1300px) {  /* Mobile Social Icons Formating */
+  .social{
+    padding: 25px;
+    margin: auto;
+  }
+}
+
+
+/*      Social Icons Formating (ANIMATION)    */
+.icons {
+	-webkit-opacity: 0.70;
+	-moz-opacity: 0.70;
+  -o-opacity: 0.70;
+  opacity: 0.70;
+
+  animation-name: iconFadein;
+  animation-duration: 4.5s;
+  animation-delay: 0s;
+
+  -moz-animation-name: iconFadein; /* Firefox */
+  -moz-animation-duration: 4.5s;
+  -moz-animation-delay: 0s;
+
+  -webkit-animation-name: iconFadein; /* Safari and Chrome */
+  -webkit-animation-duration: 4.5s;
+  -webkit-animation-delay: 0s;
+
+  -o-animation-name: iconFadein; /* Opera */
+  -o-animation-duration: 4.5s;
+  -o-animation-delay: 0s;
+
+}
+
+.icons:hover {
+  opacity: 1;
+	-webkit-opacity: 1; /* Safari and Chrome */
+	-moz-opacity: 1; /* Firefox */
+  -o-opacity: 1; /* Opera */
+}
+
+@keyframes iconFadein {
+    from {opacity: 0; }
+
+    to {opacity: 0.70; }
+}
+
+@-moz-keyframes iconFadein { /* Firefox */
+   from {opacity: 0; }
+
+   to {opacity: 0.70; }
+}
+
+@-webkit-keyframes iconFadein { /* Safari and Chrome */
+   from {opacity: 0; }
+
+   to {opacity: 0.70; }
+}
+
+@-o-keyframes iconFadein { /* Opera */
+   from {opacity: 0; }
+
+   to {opacity: 0.70; }
+}
+
+
+@media screen and (max-width: 1300px) {  /* Mobile Social Icons Formating */
+  .icons{
+    animation: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------
+ Styling for About page
+ - headShot
+ - Bio
+ - Skills List
+
+*/
+
+#about{
+  text-align: center;
+}
+
+#headShot{
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  border: solid #fff 5px;
+
+  -webkit-box-shadow: -1px 1px 11px -1px rgba(0,0,0,2.3);
+  -moz-box-shadow: -1px 1px 16px -1px rgba(0,0,0,0.30);
+  -o-box-shadow: -1px 1px 16px -1px rgba(0,0,0,0.30);
+  box-shadow: -1px 1px 16px -1px rgba(0,0,0,0.30);
+  margin: 20px auto;
+
+}
+
+@media screen and (max-width: 800px) {  /* Mobile HeadShot */
+  #headShot{
+    height: 20vw;
+    width: 20vw;
+    border: solid #EEE 2.5px;
+  }
+}
+
+.contentContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+/*
+Devicon color
+*/
+
+.skillIcon{
+  color: #333;
+  font-size: 75px;
+  margin: 25px;
+  display: inline-block;
+}
+
+.devIconList{
+  padding: 0px;
+}
+
+.skillText{
+  color: #333;
+  font-size: 18px;
+  font-family: "open Sans", sans-serif;
+  display: block;
+  margin-top: 10px;
+}
+
+
+.skillContent{
+  text-align: center;
+  height: 600px;
+  width: 400px;
+  margin-top: 45px;
+  -webkit-box-shadow: -1px 1px 16px -4px rgba(0,0,0,0.55);
+  -moz-box-shadow: -1px 1px 16px -4px rgba(0,0,0,0.55);
+  -o-box-shadow: -1px 1px 16px -4px rgba(0,0,0,0.55);
+  box-shadow: -1px 1px 16px -4px rgba(0,0,0,0.55);
+  border-radius: 10px;
+}
+
+#designBox{
+  margin-right: 20px;
+}
+
+#techBox{
+  margin: 45px 30px;
+}
+
+#frameworkBox{
+  margin-left: 20px;
+}
+
+
+.aboutBanner{
+  text-align: center;
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #EB6E44;
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+}
+.skillContent h2{
+  font-weight: normal;
+  margin-top: 18px;
+}
+
+
+.skillContent ul{
+  list-style-type: none;
+  text-align: center;
+}
+
+.skillContent ul li{
+  font-size: 18px;
+  padding: 10px;
+}
+
+.skillContent h2{
+  color: #fff;
+  background-color: #EB6E44;
+  background-size: 100%;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1500px) {
+
+}
+
+@media screen and (max-width: 1500px) {  /* Mobile Skills List */
+
+  .aboutBanner h2{
+    font-size: 2.4vw;
+  }
+
+  .contentContainer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skillContent{
+    height: auto;
+    width: 35vw;
+    margin: 30px auto;
+  }
+
+  #designBox, #techBox, #frameworkBox{
+    margin: 30px auto auto auto;
+  }
+}
+
+@media screen and (max-width: 1650px){
+  .skillIcon{
+    font-size: 55px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .skillContent{
+    text-align: center;
+    height: auto;
+    width: 100%;
+  }
+
+  .skillIcon{
+    font-size: 55px;
+  }
+
+  .aboutBanner h2{
+    font-size: 5vw;
+  }
+}
+
+
+
+
+
+/*
+  Syling for Projects section
+*/
+
+#projectsSection{
+  background-image: url("assets/prism.png");
+  background-attachment: fixed;
+}
+
+#projectContainer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+}
+
+.project{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  padding: 5%;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+.project p{
+  font-size: 1.2em;
+}
+
+.projectEx{
+  height: auto; 
+  width: 50%;
+}
+
+.projectDescript{
+  text-align: left;
+  padding-left: 40px;
+}
+
+.projectLinks{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+}
+
+.projectButton{
+  text-align: center;
+  width: 100px;
+  display: inline-block;
+  background-color: #EB6E44;
+  border: none;
+  border-radius: 50px;
+  padding: 20px;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 1em;
+  margin-bottom: 0px;
+  transition: 0.8s;
+  -webkit-transition: 0.8s;
+}
+
+.projectButton:hover{
+  /*background-color: rgb(0, 164, 170);*/
+  background-color: rgb(148, 67, 40);
+}
+
+.projectButton:visited{
+  color: #fff;
+}
+
+@media screen and (max-width: 1300px) { 
+  .project{
+    flex-direction: column;
+  }
+
+  .projectEx{
+    width: 100%;
+    height: auto; 
+  }
+
+  .projectDescript{
+    text-align: left;
+  }
+  .projectDescript p{
+    text-align: left;
+  }
+}
+
+
+@media screen and (max-width: 700px) { 
+  .project{
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .projectDescript{
+    text-align: left;
+    padding-left: 0px;
+  }
+  .projectDescript p{
+    text-align: left;
+  }
+
+  .projectLinks{
+    margin: auto;
+    justify-content: space-evenly;
+  }
+  
+  .projectButton{
+    width: 30%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 700px) { 
+
+
+  .projectLinks::before{
+    margin: 10px;
+  }
+}
+
+
+/* ----------------------------------------------------
+ Styling for contact form
+*/
+
+.form {
+	width: 100%;
+  text-align: center;
+}
+
+input[type = text], [type = email] {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type = submit], [type = reset] {
+    width: 100px;
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+textarea {
+    width: 600px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]:hover {
+    background-color: #EB6E44;
+}
+
+input[type=reset]:hover {
+    background-color: #EB6E44;
+}
+
+
+@media screen and (max-width: 1000px){
+  textarea, input[type = text], [type = email]{
+    width: 60%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------
+ Styling for footer secion
+
+*/
+
+footer{
+  width: 100%;
+  height: auto;
+  background-image: url("../assets/zwartevilt.png");
+}
+
+
+.footerContainer{
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footerContent{
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.footerText{
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+#footerSocial li{
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.footerContent a{
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footerContent a:hover{
+  color: rgb(0, 164, 170);
+  text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 1000px){
+    
+}
