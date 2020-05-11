@@ -27,6 +27,7 @@
           <li><a href="#about">About Me</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="assets/documents/Henderson-resume.pdf" target="_blank"><i class="far fa-file-alt"></i> Resume</a></li>
         </ul>
       </nav>
       <!-- navigation end -->
@@ -39,11 +40,12 @@
           <h2 id="logoSub">Web + Software Development Portfolio</h2>
 
           <div class="social">
-    				<a href="https://twitter.com/_StrongBobby" target="_blank"><img class="icons" src="assets/twitter.png" alt="Twitter" height="45" width="45"></a>
-    				<a href="https://www.linkedin.com/in/bobby-henderson-884236149" target="_blank"><img class="icons" src="assets/linkin.png" alt="linkedin" height="45" width="45"></a>
+            <a class="icons" target="_blank" href="https://www.linkedin.com/in/bobby-henderson-884236149/"><i class="fab fa-linkedin-in"></i></a>
+            <a class="icons" target="_blank" href="https://github.com/BobbyHen"><i class="fab fa-github"></i></a>
   			  </div>
         </div>
       </section>
+      
       <!-- landing page ending -->
     </header>
 
@@ -80,6 +82,7 @@
               <div class="aboutBanner"><h2>Backend</h2></div>
               <ul class="devIconList">
                 <i class="devicon-php-plain skillIcon"><span class="skillText">PHP</span></i>
+                <i class="devicon-python-plain skillIcon"><span class="skillText">Python/Flask</span></i>
                 <i class="devicon-mongodb-plain-wordmark skillIcon"><span class="skillText">MongoDB</span></i>
                 <i class="devicon-mysql-plain-wordmark skillIcon"><span class="skillText">MySQL</span></i>
                 <i></i>
@@ -95,7 +98,7 @@
         <div id="projectContainer">
           <!-- Project 1 -->
           <div class="project">
-            <img class="projectEx"src="assets/intechProject.gif" alt="">
+            <img class="projectEx"src="assets/intechProject.gif" alt="project">
             <div class="projectDescript">
                 <h3>inTech Website</h3>
                 <p>Website for Broward College’s technology club to showcase events, meeting times and projects created by the club’s members. Created using HTML, CSS, JavaScrips, and PHP. Running on NGINX web server and using Postfix as the mail server. (Soon to be rebuilt using React)
@@ -110,13 +113,13 @@
                 </div>
                 <div class="projectLinks">
                     <a class="projectButton" href="https://github.com/BobbyHen/inTech-Website" target="_blank">See Code</a>
-                    <a class="projectButton" href="https://intech.club" target="_blank">See live</a>
+                    <a class="projectButton" href="https://intech.club" target="_blank">See Live</a>
                 </div>
             </div>
           </div>
           <!-- Project 2 -->
           <div class="project">
-              <img class="projectEx desktop"src="assets/surfsup-project.png" alt="">
+              <img class="projectEx" src="assets/project-gizmo.gif" alt="project">
               <div class="projectDescript">
                   <h3>surfsupgizmo.com</h3>
                   <p>Website developed for children's book series Gizmo's Awesome Adventures!. 
@@ -128,16 +131,16 @@
                   </div>
                   <div class="projectLinks">
                       <!-- <a class="projectButton" href="#" target="_blank">See Code</a> -->
-                      <a class="projectButton" href="https://surfsupgizmo.com/" target="_blank">See live</a>
+                      <a class="projectButton" href="https://surfsupgizmo.com/" target="_blank">See Live</a>
                   </div>
               </div>
           </div>
           <!-- Project 3 -->
           <div class="project">
-            <img class="projectEx"src="assets/chemisTree-project/Screen Shot 2020-05-10 at 12.53.48 PM.png" alt="">
+            <img class="projectEx"src="assets/chemisTree-project/Screen Shot 2020-05-10 at 12.53.48 PM.png" alt="project">
             <div class="projectDescript">
                 <h3>ChemisTree</h3>
-                <p>ChemisTree is a Windows GUI application meant as an aid for students learning advanced chemistry. Created using C#, Windows Forms, and MySQL for the database.
+                <p>ChemisTree is a Windows GUI application meant as an aid for students learning advanced chemistry. The app was created using C#, Windows Forms, and MySQL for the database.
                 </p>
                 <div class="technologies-icons">
                     <i class="devicon-csharp-plain"></i>
@@ -145,16 +148,16 @@
                 </div>
                 <div class="projectLinks">
                     <a class="projectButton" href="https://github.com/BobbyHen/ChemisTree.git" target="_blank">See Code</a>
-                    <a class="projectButton" href="#" target="_blank">See live</a>
+                    <a class="projectButton" href="#" target="_blank">See Live</a>
                 </div>
             </div>
         </div>
          <!-- Project 4 -->
          <div class="project">
-            <img class="projectEx"src="assets/swanson-project.png" alt="">
+            <img class="projectEx"src="assets/swanson-project.png" alt="project">
             <div class="projectDescript">
                 <h3>RonSwanson App</h3>
-                <p>An application using React, Flask, and MongoDB to help teach members of the inTech club the fundimentals of front and beckend development. The Flask backend pulls a quote fron the <a target="_blank" href="https://github.com/jamesseanwright/ron-swanson-quotes">ron-swanson-quotes</a> API the form of a JSON object, stores it in it in the database and returns in to the React frontend.
+                <p>An application using React, Flask, and MongoDB to help teach members of the inTech club the fundimentals of front and beckend development. The Flask backend pulls a quote from the <a target="_blank" href="https://github.com/jamesseanwright/ron-swanson-quotes">ron-swanson-quotes</a> API the form of a JSON object, stores it in it in the database and returns in to the React frontend.
                 </p>
                 <div class="technologies-icons">
                     <i class="devicon-react-original"></i>
@@ -163,8 +166,17 @@
                 </div>
                 <div class="projectLinks">
                     <a class="projectButton" href="https://github.com/BobbyHen/web-app" target="_blank">See Code</a>
-                    <a class="projectButton" href="https://bobbyhen.github.io/RonSwansonReact/" target="_blank">See live</a>
+                    <a class="projectButton" href="https://bobbyhen.github.io/RonSwansonReact/" target="_blank">See Live</a>
                 </div>
+            </div>
+        </div>
+
+         <!-- Project 4 -->
+         <div class="project">
+            <div class="projectDescript">
+                <h3>More cool stuff coming soon!</h3>
+                <p>
+                </p>
             </div>
         </div>
 
