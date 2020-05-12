@@ -68,9 +68,9 @@ section{
   color: #ccc;
 }
 
-@media screen and (max-width: 600px) { 
+@media screen and (max-width: 800px) { 
   section{
-    padding: 0px 10% 20%;
+    padding: 0px 5% 50px;
   }
 }
 
@@ -99,12 +99,6 @@ p{
   h1{
     font-size: 6em;
     color: #333;
-
-  }
-
-  p{
-    font-size: 2vw;
-    text-align: center;
   }
 }
 
@@ -116,7 +110,6 @@ p{
 
   p{
     font-size: 3vw;
-    text-align: center;
   }
 }
 
@@ -124,7 +117,6 @@ p{
 
   p{
     font-size: 4.5vw;
-    text-align: center;
   }
 }
 
@@ -696,7 +688,7 @@ Devicon color
   padding: 5%;
   background-color: rgb(0, 0, 0, 0.5);
   border-radius: 20px;
-  margin-top: 40px;
+  margin: 40px;
 }
 
 .project p{
@@ -706,8 +698,6 @@ Devicon color
 .projectEx{
   height: auto; 
   max-width: 400px;
-  min-width: 450px;
-  margin-bottom: 20px;
 }
 
 .desktop {
@@ -767,32 +757,43 @@ Devicon color
   color: #fff;
 }
 
-@media screen and (max-width: 1300px) { 
+@media screen and (max-width: 1530px) {
   .project{
     flex-direction: column;
   }
 
-  .projectEx{
+  .projectEx {
+    margin-bottom: 20px;
+  }
+}
+
+/* @media screen and (max-width: 1300px) { 
+  .project{
+    flex-direction: column;
+  } */
+
+  /* .projectEx{
     min-width: 100%;
     max-width: 100%;
     max-height: auto; 
-  }
+  } */
 
-  .projectDescript{
+  /* .projectDescript{
     text-align: left;
   }
   .projectDescript p{
     text-align: left;
   }
+} */
+
+@media screen and (max-width: 1000px) { 
+  .projectEx {
+    max-width: 100%;
+  }
 }
 
 
 @media screen and (max-width: 700px) { 
-  .project{
-    flex-direction: column;
-    width: 90%;
-  }
-
   .projectDescript{
     text-align: left;
     padding-left: 0px;
@@ -810,11 +811,6 @@ Devicon color
     width: 30%;
     height: auto;
   }
-}
-
-@media screen and (max-width: 700px) { 
-
-
   .projectLinks::before{
     margin: 10px;
   }
