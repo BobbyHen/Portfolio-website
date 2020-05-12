@@ -68,9 +68,9 @@ section{
   color: #ccc;
 }
 
-@media screen and (max-width: 600px) { 
+@media screen and (max-width: 800px) { 
   section{
-    padding: 0px 10% 20%;
+    padding: 0px 5% 50px;
   }
 }
 
@@ -99,12 +99,6 @@ p{
   h1{
     font-size: 6em;
     color: #333;
-
-  }
-
-  p{
-    font-size: 2vw;
-    text-align: center;
   }
 }
 
@@ -116,7 +110,6 @@ p{
 
   p{
     font-size: 3vw;
-    text-align: center;
   }
 }
 
@@ -124,7 +117,6 @@ p{
 
   p{
     font-size: 4.5vw;
-    text-align: center;
   }
 }
 
@@ -151,6 +143,9 @@ nav a {
   font-size: 17px;
 }
 
+nav a:hover {
+  color: #EB6E44;
+}
 
 /*   Nav Link Border Hover Animation   */
 
@@ -411,9 +406,10 @@ nav ul li .hamIcon {
 
 /*      Social Container Formating     */
 .social{
-  width: 95px;
-  padding-left: 19%;
-  margin: 20px auto;
+  width: 100%;
+  margin: 20px 0 0 5%;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1300px) {  /* Mobile Social Icons Formating */
@@ -426,6 +422,9 @@ nav ul li .hamIcon {
 
 /*      Social Icons Formating (ANIMATION)    */
 .icons {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 5px;
 	-webkit-opacity: 0.70;
 	-moz-opacity: 0.70;
   -o-opacity: 0.70;
@@ -447,6 +446,12 @@ nav ul li .hamIcon {
   -o-animation-duration: 4.5s;
   -o-animation-delay: 0s;
 
+}
+
+.social a {
+  border: solid 2px #fff;
+  padding: 10px 14px;
+  border-radius: 100%;
 }
 
 .icons:hover {
@@ -486,24 +491,6 @@ nav ul li .hamIcon {
     animation: none;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ----------------------------------------------------
@@ -697,11 +684,11 @@ Devicon color
 .project{
   display: flex;
   flex-direction: row;
-  width: 90%;
+  width: auto;
   padding: 5%;
   background-color: rgb(0, 0, 0, 0.5);
   border-radius: 20px;
-  margin-top: 40px;
+  margin: 40px;
 }
 
 .project p{
@@ -710,8 +697,7 @@ Devicon color
 
 .projectEx{
   height: auto; 
-  width: 50%;
-  margin-bottom: 20px;
+  max-width: 400px;
 }
 
 .desktop {
@@ -728,7 +714,7 @@ Devicon color
   color: #fff;
 }
 
-.projectDescript a {
+.projectDescript p a {
   color: rgb(0, 164, 170);
 }
 
@@ -745,6 +731,7 @@ Devicon color
 }
 
 .projectButton{
+  color: #fff;
   text-align: center;
   width: 100px;
   display: inline-block;
@@ -770,31 +757,43 @@ Devicon color
   color: #fff;
 }
 
-@media screen and (max-width: 1300px) { 
+@media screen and (max-width: 1530px) {
   .project{
     flex-direction: column;
   }
 
-  .projectEx{
-    width: 100%;
-    height: auto; 
+  .projectEx {
+    margin-bottom: 20px;
   }
+}
 
-  .projectDescript{
+/* @media screen and (max-width: 1300px) { 
+  .project{
+    flex-direction: column;
+  } */
+
+  /* .projectEx{
+    min-width: 100%;
+    max-width: 100%;
+    max-height: auto; 
+  } */
+
+  /* .projectDescript{
     text-align: left;
   }
   .projectDescript p{
     text-align: left;
   }
+} */
+
+@media screen and (max-width: 1000px) { 
+  .projectEx {
+    max-width: 100%;
+  }
 }
 
 
 @media screen and (max-width: 700px) { 
-  .project{
-    flex-direction: column;
-    width: 90%;
-  }
-
   .projectDescript{
     text-align: left;
     padding-left: 0px;
@@ -812,11 +811,6 @@ Devicon color
     width: 30%;
     height: auto;
   }
-}
-
-@media screen and (max-width: 700px) { 
-
-
   .projectLinks::before{
     margin: 10px;
   }
