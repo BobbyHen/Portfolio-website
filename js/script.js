@@ -1,19 +1,20 @@
 // Responsive Navigation
 function responsiveNav() {
-  let navChange = document.getElementById("menu");
+  const nav = document.querySelector("nav");
 
-  if (navChange.className === "nav") {
-    navChange.className += " responsive";
-  }
-  else {
-    navChange.className = "nav";
-  }
+  if(nav.classList.contains("responsive") == false){
+		nav.classList.add("responsive");
+	}
+	else{
+		nav.classList.remove("responsive");
+	} 
 }
-
 
 $(window).scroll(function(){
 	// Sticky Navigation
-	if($(this).scrollTop() > 1150){
+	let vh = $(window).height();
+
+	if($(this).scrollTop() > vh - 30){
 		$('nav').addClass('nav-scrolled');
     $('nav a').addClass('nav-scrolled-a');
 	}
@@ -26,9 +27,11 @@ $(window).scroll(function(){
 	const scrollDistance = $(window).scrollTop();
 
 	$('#home, #about, #projects, #contact').each(function(i) {
-			if ($(this).position().top-80 <= scrollDistance) {
-					$('nav a.active').removeClass('active');
-					$('nav a').eq(i).addClass('active');
-			}
+		if ($(this).position().top - 80 <= scrollDistance) {
+			$('nav a.active').removeClass('active');
+			$('nav a').eq(i).addClass('active');
+			console.log("scrollDistance: " + scrollDistance);
+			// console.log("Tab switched " + i);
+		}
 	});
-})
+});

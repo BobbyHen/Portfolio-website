@@ -8,13 +8,12 @@
 
 
 
-*{
+* {
   margin: auto;
   padding: 0;
 }
 
 html{
-  font-size: 100%;
   scroll-behavior: smooth;
 }
 
@@ -24,7 +23,6 @@ body{
   width: 100%;
   margin: 0;
 }
-
 
 header{
   width: 100%;
@@ -75,9 +73,9 @@ section{
 }
 
 /*    Body text formating       */
-h1{
+h1 {
   font-weight: normal;
-  font-size: 5em;
+  font-size: 4em;
   text-align: center;
   color: #333;
   margin-bottom: 50px;;
@@ -89,15 +87,15 @@ h1{
   margin-bottom: 50px;
 }
 
-p{
-  font-size: 24px;
+p {
+  font-size: 1.6em;
   font-weight: 300;
   padding: 25px 0px;
 }
 
 @media screen and (max-width: 1300px) { /* Mobile Text Formating */
   h1{
-    font-size: 6em;
+    font-size: 4em;
     color: #333;
   }
 }
@@ -125,7 +123,6 @@ p{
 /* ----------------------------------------------------
  Styling for navigation.
 */
-
 nav {
   overflow: hidden;
   position: absolute;
@@ -133,18 +130,19 @@ nav {
 }
 
 
-nav a {
-  font-family: 'Sarabun', sans-serif;
+nav .nav-links {
+  font-family: 'Lato', sans-serif;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 50px 25px 21px 20px;
+  padding: 29px 25px 26px 20px;
   text-decoration: none;
   font-size: 17px;
 }
 
-nav a:hover {
-  color: #EB6E44;
+nav .nav-links:hover {
+  /* color: #EB6E44; */
+  color: #fff;
 }
 
 /*   Nav Link Border Hover Animation   */
@@ -152,7 +150,6 @@ nav a:hover {
 .active {
   color: #EB6E44;
   border-bottom: 4px solid #EB6E44;
-  
 }
 
 nav ul{
@@ -166,16 +163,35 @@ nav ul li{
   display: inline-block;
 }
 
+/* 
 nav ul li .hamIcon {
   display: none;
   font-size: 25px;
+} */
+
+nav #ham-icon {
+  display: none;
+  font-size: 25px;
+}
+
+#ham-icon, 
+#toggle {
+  float: right;
+  position: relative;
+  z-index: 201;
+}
+
+#toggle {
+  margin-top: 35px;
+  display: none;
+  
 }
 
 
 .nav-scrolled{ /* Sticky Navigation */
   height: 80px;
   position: fixed;
-  background-color: #000;
+  background-color: rgb(19, 19, 19);
   animation-duration: .5s;
   animation-name: nav-scrolled;
   /* opacity: .9; */
@@ -196,9 +212,7 @@ nav ul li .hamIcon {
   }
 }
 
-
-
-@media screen and (max-width: 1300px) { /* Mobile Navogigation */
+@media screen and (max-width: 1000px) { /* Mobile Navogigation */
   nav {
     margin: auto;
   }
@@ -213,41 +227,149 @@ nav ul li .hamIcon {
     display: block;
   }
 
-  nav ul li a {
+  #menu {
     display: none;
   }
 
-  nav ul li a.hamIcon {
-    float: right;
+  nav #ham-icon {
     display: block;
-    padding: 35px 50px 0px 0px;
+    /* padding: 19px 50px 0px 0px; */
+    padding: 19px 30px 0px 0px;
+    cursor: pointer;
     border-bottom: none;
+    color: #EEE;
+  }
+
+  #ham-icon::before {
+    content:'\002635';
+    font-size: 1.6em;
+  }
+
+  main .logoArea {
+    margin: 170px 0%;
+  }
+
+  #toggle:checked + #menu {
+    display: block;
+    background-color: rgb(255, 149, 113);
+    color: #fff;
+    z-index: 200;
+    position: fixed;
+    width: 100%;
+    animation-duration: .8s;
+    animation-name: nav-slide-in;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.46);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.46);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.46);
+
+    /* display: block;
+    background-color: rgb(255, 149, 113);
+    color: #fff;
+    z-index: 200;
+    position: fixed;
+    width: 90%;
+    animation-duration: .8s;
+    animation-name: nav-slide-in;
+    border-radius: 0 0px 15px 0;
+    border: solid 0px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.46);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.46);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.46); */
+  }
+
+  #toggle:checked + .nav-links {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding: 35px 20px;
+    border-bottom: none;
+    z-index: 150;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+  }
+
+  /* #toggle:checked + #ham-icon{
+    display: block;
+    padding: 19px 30px 0px 0px;
+    cursor: pointer;
+    border-bottom: none;
+    color: #EEE;
+    position: fixed;
+  } */
+
+  #toggle:not(:checked) + #menu {
+    display: block;
+    background-color: rgb(255, 137, 97);
+    color: #fff;
+    z-index: 200;
+    position: fixed;
+    width: 100%;
+    margin-top: -100%;
+    animation-duration: .8s;
+    animation-name: nav-slide-out;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.46);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.46);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.46);
+
+    /* display: block;
+    background-color: rgb(255, 149, 113);
+    color: #fff;
+    z-index: 200;
+    position: fixed;
+    width: 90%;
+    margin-left: -100%;
+    animation-duration: .8s;
+    animation-name: nav-slide-out;
+    border-radius: 0 0px 15px 0;
+    border: solid 0px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.46);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.46);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.46); */
+  }
+
+  nav .nav-links {
+    padding: 29px 6vw 29px 20px;
+  }
+
+  nav .active {
+    color: #fff;
+    background-color: #EB6E44;
+    border: none;
+  }
+
+  .nav-scrolled{ /* Sticky Navigation */
+    animation: none;
   }
 
 /* Mobile Navigation (Responsive Class Applied) */
-  nav.responsive {
-    position: relative;
+  nav #menu {
+    position: fixed;
+    z-index: 100;
+  }
+}
+
+
+/* ////////////////    Navigation sliding animations    ///////////// */
+/*  Navigation slide out   */
+@keyframes nav-slide-in {
+  from {
+    margin-top: -100%;
   }
 
-  nav.responsive .hamIcon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 35px 50px 0px 0px;
+  to {
+    margin-top: 0%;
+  }
+}
+/*  Navigation slide in   */
+@keyframes nav-slide-out {
+  from {
+    margin-top: 0%;
   }
 
-  nav.responsive a {
-    float: none;
-    display: block;
-    color: #000;
-    padding: 35px 20px;
-    border-bottom: none;
-  }
-
-  nav.responsive .active {
-    color: #fff;
-    background-color: #EB6E44;
-    border-bottom: none;
+  to {
+    margin-top: -100%;
+    display: none;
   }
 }
 
@@ -259,14 +381,13 @@ nav ul li .hamIcon {
     - Logo
     - Social Icons
 */
-
-
 #landing{
   background-image: url("../assets/zwartevilt.png");
   background-attachment: fixed;
   width: auto;
-  height: 1200px;
+  height: 100vh;
   padding: 0px 20% 0px 20%;
+  overflow: hidden;
 }
 
 /*      Logo Formating     */
@@ -340,6 +461,7 @@ nav ul li .hamIcon {
   padding: 15px;
   margin: 10px 0;
 }
+
 @keyframes blinkingText{
 	0%{		color: transparent;	}
 	49%{	color: rgba(255, 255, 255, 0.89);	}
@@ -348,12 +470,10 @@ nav ul li .hamIcon {
 	100%{	color: transparent;	}
 }
 
-
-
 @media screen and (max-width: 1300px) {  /* Mobile Logo Formating */
   #logoMain{
     text-align: left;
-    font-size: 10vw;
+    font-size: 6em;
     margin: auto;
     margin: 0;
     border-bottom: none;
@@ -364,22 +484,29 @@ nav ul li .hamIcon {
     text-align: left;
     margin-left: 10px;
     display: inline;
-    font-size: 2vw;
+    font-size: 1.4em;
     animation: none;
-  }
-
-  .brac{
-    color: #fff;
-    font-size: 2vw;
   }
 }
 
+@media screen and (max-width: 800px) {
+  .logoArea{
+    /* margin-top: 130px; */
+    margin-left: 5px;
+  }
+  
+  #landing{
+    padding: 20px 5%;
+  }
 
+  .blinking{
+    border-radius: 15px;
+  }
+}
 
 @media screen and (max-width: 500px) {  /* Mobile Logo Formating */
-
   .logoArea{
-    margin-top: 170px;
+    margin-top: 130x;
     margin-left: 5px;
   }
 
@@ -392,12 +519,8 @@ nav ul li .hamIcon {
   }
 
   #logoSub{
-    font-size: 3vw;
+    font-size: 1.2em;
     margin-left: 5px;
-  }
-
-  .brac{
-    font-size: 3vw;
   }
 }
 
@@ -500,8 +623,7 @@ nav ul li .hamIcon {
  - Skills List
 
 */
-
-#about{
+#aboutSection{
   text-align: center;
 }
 
@@ -535,7 +657,6 @@ nav ul li .hamIcon {
 /*
 Devicon color
 */
-
 .skillIcon{
   color: #333;
   font-size: 75px;
@@ -554,7 +675,6 @@ Devicon color
   display: block;
   margin-top: 10px;
 }
-
 
 .skillContent{
   text-align: center;
@@ -580,7 +700,6 @@ Devicon color
   margin-left: 20px;
 }
 
-
 .aboutBanner{
   text-align: center;
   width: 100%;
@@ -589,11 +708,6 @@ Devicon color
   border-radius: 10px 10px 0px 0px;
   overflow: hidden;
 }
-.skillContent h2{
-  font-weight: normal;
-  margin-top: 18px;
-}
-
 
 .skillContent ul{
   list-style-type: none;
@@ -607,20 +721,14 @@ Devicon color
 
 .skillContent h2{
   color: #fff;
+  font-weight: normal;
+  margin-top: 18px;
   background-color: #EB6E44;
   background-size: 100%;
   margin-bottom: 10px;
 }
 
-@media screen and (max-width: 1500px) {
-
-}
-
 @media screen and (max-width: 1500px) {  /* Mobile Skills List */
-
-  .aboutBanner h2{
-    font-size: 2.4vw;
-  }
 
   .contentContainer{
     display: flex;
@@ -629,11 +737,12 @@ Devicon color
 
   .skillContent{
     height: auto;
-    width: 35vw;
     margin: 30px auto;
   }
 
-  #designBox, #techBox, #frameworkBox{
+  #designBox, 
+  #techBox, 
+  #frameworkBox{
     margin: 30px auto auto auto;
   }
 }
@@ -656,7 +765,7 @@ Devicon color
   }
 
   .aboutBanner h2{
-    font-size: 5vw;
+    /* font-size: 5vw; */
   }
 }
 
@@ -667,7 +776,6 @@ Devicon color
 /*
   Syling for Projects section
 */
-
 #projectsSection{
   background-image: url("../assets/prism.png");
   background-attachment: fixed;
@@ -678,7 +786,6 @@ Devicon color
   flex-direction: column;
   height: 100%;
   width: 100%;
-
 }
 
 .project{
@@ -767,33 +874,19 @@ Devicon color
   }
 }
 
-/* @media screen and (max-width: 1300px) { 
-  .project{
-    flex-direction: column;
-  } */
-
-  /* .projectEx{
-    min-width: 100%;
-    max-width: 100%;
-    max-height: auto; 
-  } */
-
-  /* .projectDescript{
-    text-align: left;
-  }
-  .projectDescript p{
-    text-align: left;
-  }
-} */
-
 @media screen and (max-width: 1000px) { 
+  .project {
+    display: block;
+    margin: 40px 0;
+  }
+
   .projectEx {
     max-width: 100%;
   }
 }
 
 
-@media screen and (max-width: 700px) { 
+@media screen and (max-width: 800px) { 
   .projectDescript{
     text-align: left;
     padding-left: 0px;
@@ -803,12 +896,14 @@ Devicon color
   }
 
   .projectLinks{
+    width: 100%;
     margin: auto;
+    flex-direction: column;
     justify-content: space-evenly;
   }
   
   .projectButton{
-    width: 30%;
+    width: 80%;
     height: auto;
   }
   .projectLinks::before{
@@ -847,6 +942,10 @@ input[type = submit], [type = reset] {
     cursor: pointer;
 }
 
+#company {
+  width: 600px;
+}
+
 textarea {
     width: 600px;
     padding: 12px 20px;
@@ -865,10 +964,14 @@ input[type=reset]:hover {
     background-color: #EB6E44;
 }
 
-
-@media screen and (max-width: 1000px){
-  textarea, input[type = text], [type = email]{
-    width: 60%;
+@media screen and (max-width: 1100px){
+  #company, 
+  textarea, 
+  input[type = text], 
+  input[type = email], 
+  input[type = submit]{
+    width: 100%;
+    padding: 12px 5px;
   }
 }
 
