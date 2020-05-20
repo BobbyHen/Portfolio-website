@@ -135,7 +135,7 @@ nav .nav-links {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 29px 25px 26px 20px;
+  padding: 28px 23px 26px 20px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -149,7 +149,7 @@ nav .nav-links:hover {
 
 .active {
   color: #EB6E44;
-  border-bottom: 4px solid #EB6E44;
+  border-bottom: 5px solid #EB6E44;
 }
 
 nav ul{
@@ -243,6 +243,7 @@ nav #ham-icon {
   #ham-icon::before {
     content:'\002635';
     font-size: 1.6em;
+    font-weight: 600;
   }
 
   main .logoArea {
@@ -251,7 +252,7 @@ nav #ham-icon {
 
   #toggle:checked + #menu {
     display: block;
-    background-color: rgb(255, 149, 113);
+    background-color: rgb(253, 157, 125);
     color: #fff;
     z-index: 200;
     position: fixed;
@@ -277,6 +278,15 @@ nav #ham-icon {
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.46); */
   }
 
+  /* #toggle:checked + #ham-icon {
+    display: block;
+    padding: 19px 30px 0px 0px;
+    cursor: pointer;
+    border-bottom: none;
+    color: #EEE;
+    position: fixed;
+  } */
+
   #toggle:checked + .nav-links {
     display: flex;
     justify-content: center;
@@ -288,15 +298,6 @@ nav #ham-icon {
     font-family: 'Lato', sans-serif;
     font-weight: 800;
   }
-
-  /* #toggle:checked + #ham-icon{
-    display: block;
-    padding: 19px 30px 0px 0px;
-    cursor: pointer;
-    border-bottom: none;
-    color: #EEE;
-    position: fixed;
-  } */
 
   #toggle:not(:checked) + #menu {
     display: block;
@@ -793,7 +794,7 @@ Devicon color
   flex-direction: row;
   width: auto;
   padding: 5%;
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   margin: 40px;
 }
