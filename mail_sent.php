@@ -45,18 +45,15 @@
   <body>
 
     <header>
-      <nav id="menu" style="background-color: #000;">
-        <ul>
-          <li>
-            <a class="hamIcon" onclick="responsiveNav()">
-              <i class="fa fa-bars"></i>
-            </a>
-          </li>
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#about">About Me</a></li>
-          <li><a href="index.html#projects">Projects</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-          <li><a href="assets/documents/Henderson-resume.pdf" target="_blank"><i class="far fa-file-alt"></i> Resume</a></li>
+    <nav style="background-color: #000;">
+        <label id="ham-icon" for="toggle"></label>
+        <input id="toggle" type="checkbox" name="vehicle1" value="Bike">
+        <ul id="menu">
+          <li><a class="nav-links" href="http://bobbyhenderson.tech/">Home</a></li>
+          <li><a class="nav-links" href="http://bobbyhenderson.tech/#about">About Me</a></li>
+          <li><a class="nav-links" href="http://bobbyhenderson.tech/#projects">Projects</a></li>
+          <li><a class="nav-links" href="http://bobbyhenderson.tech/#contact">Contact</a></li>
+          <li><a class="nav-links" href="assets/documents/Henderson-resume.pdf" target="_blank"><i class="far fa-file-alt"></i> Resume</a></li>
         </ul>
       </nav>
       <!-- navigation end -->
